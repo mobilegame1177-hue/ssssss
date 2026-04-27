@@ -1,7 +1,7 @@
 {
   "name": "roblox-injector-demo",
   "version": "1.0.0",
-  "description": "Фейковый инжектор скриптов для Roblox (демо)",
+  "description": "Fake injector for Roblox scripts (demo)",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -20,8 +20,10 @@
       "output": "dist"
     },
     "win": {
-      "target": "nsis",
-      "icon": "icon.png"
-    }
+      "target": "portable",
+      "icon": "icon.png",
+      "arch": ["ia32"]
+    },
+    "linux": null
   }
 }
