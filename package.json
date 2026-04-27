@@ -21,9 +21,7 @@
     },
     "win": {
       "target": "portable",
-      "icon": "icon.png",
       "arch": ["ia32"]
-    },
-    "linux": null
+    }
   }
 }
