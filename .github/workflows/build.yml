@@ -1,4 +1,4 @@
-name: Build Windows EXE (32-bit)
+name: Build 32-bit EXE
 
 on:
   push:
@@ -15,15 +15,15 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 18
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build 32-bit
+      - name: Build 32-bit portable
         run: npm run build -- --win portable --ia32
 
-      - name: Upload EXE
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: NexusModLauncher-ia32
