@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Mod Launcher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Splash screen -->
+  <div id="splash" class="splash">
+    <div class="splash-content">
+      <div class="logo">NEXUS</div>
+      <div class="sub">Mod Launcher v1.0</div>
+      <div class="progress-bar-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <div class="splash-text" id="splashText">Bypassing security protocols...</div>
+    </div>
+  </div>
+
+  <!-- Main app -->
+  <div id="app" class="app hidden">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo-small">NEXUS</div>
+      <div class="nav-item active" data-tab="mods">
+        <span class="icon">🎮</span>
+        <span>Mods</span>
+      </div>
+      <div class="nav-item" data-tab="settings">
+        <span class="icon">⚙️</span>
+        <span>Settings</span>
+      </div>
+      <div class="nav-item" data-tab="profile">
+        <span class="icon">👤</span>
+        <span>Profile</span>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+      <div class="top-bar">
+        <h1 id="pageTitle">Best Mod Collection</h1>
+        <div class="status-badge">
+          <span class="online-dot"></span> Online
+        </div>
+      </div>
+
+      <!-- Mods tab -->
+      <div id="modsTab" class="tab active">
+        <div class="mods-grid" id="modsGrid"></div>
+      </div>
+
+      <!-- Settings tab placeholder -->
+      <div id="settingsTab" class="tab hidden">
+        <div class="placeholder">
+          <h2>Application Settings</h2>
+          <p>Settings will be available here (demo mode)</p>
+        </div>
+      </div>
+
+      <!-- Profile tab placeholder -->
+      <div id="profileTab" class="tab hidden">
+        <div class="placeholder">
+          <h2>User Profile</h2>
+          <p>User information (demo mode)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success modal -->
+  <div id="successModal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">Success!</div>
+      <div class="modal-body">
+        <p>Hack successfully loaded into <strong>Roblox</strong></p>
+        <p><span class="label">Status</span> <span class="value active">Active</span></p>
+        <p><span class="label">Injection Time</span> <span class="value" id="injTime">0.0s</span></p>
+        <p><span class="label">Security</span> <span class="value security">✓ Verified</span></p>
+      </div>
+      <div class="modal-footer">
+        <button id="modalContinue">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

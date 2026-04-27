@@ -1,0 +1,27 @@
+{
+  "name": "roblox-injector-demo",
+  "version": "1.0.0",
+  "description": "Фейковый инжектор скриптов для Roblox (демо)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.example.robloxinjector",
+    "productName": "Nexus Mod Launcher",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon.png"
+    }
+  }
+}
